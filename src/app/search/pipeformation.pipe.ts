@@ -64,17 +64,19 @@ export class PipeformationPipe implements PipeTransform {
       return false;
     });
 
-    if (filteredItems.length === 0) {
-      this.dialog.open(PoputsearchComponent, {
-        width: '300px', // Adjust the width as needed,
-        data: "no found " + searchText + "  not found video" 
-      });
+
+
+    // if (filteredItems.length === 0) {
+    //   this.dialog.open(PoputsearchComponent, {
+    //     width: '300px', // Adjust the width as needed,
+    //     data: "no found " + searchText + "  not found video" 
+    //   });
       
-      setTimeout(() => {
-         window.location.reload();
-         localStorage.setItem("serachtext",searchText);
-      }, 1000);
-    }
+    //   setTimeout(() => {
+    //      window.location.reload();
+    //      localStorage.setItem("serachtext",searchText);
+    //   }, 3000);
+    // }
 
     return filteredItems;
   }
