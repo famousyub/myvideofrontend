@@ -2,10 +2,11 @@
     <div class="vidz-row">
         <div class="container">
             <div class="vidz_sec">
-                <h3>Featured Videos</h3>
+                <h3>Formation Videos</h3>
+                <input type="text" [(ngModel)]="searchText" placeholder="Search">
                 <div class="vidz_list">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth" *ngFor="let vid of formations">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth" *ngFor="let vid of formations | pipeformation: searchText">
                             <div class="videoo">
                                 <div class="vid_thumbainl">
                                     <a [routerLink]="['/vid/', vid.id]" title="{{vid.id}}">
@@ -20,7 +21,9 @@
                                 <div class="video_info">
                                     <h3><a [routerLink]="['/vid/', vid.id]" title="{{vid.id}}">  {{vid.description}}</a></h3>
                                     <h4><a [routerLink]="['/vid/', vid.id]" title="{{vid.id}}">{{vid.tag}}</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
-                                    <span>{{vid.tag}}.<small class="posted_dt">{{vid.id}}</small></span>
+                                    <span>{{vid.tag}}.<small class="posted_dt">
+                                        
+                                        <p style="color:gold">{{vid.cat}}</p></small></span>
                                 </div>
                             </div><!--videoo end-->
                         </div>
@@ -37,7 +40,7 @@
                 <a href="#" title="" class="view-btn">View all</a>
                 <div class="vidz_list">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth" *ngFor="let vid of mediashare">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth" *ngFor="let vid of mediashare | pipeformation: searchText">
                             <div class="videoo">
                                 <div class="vid_thumbainl">
                                     <a href="#" title="">
@@ -49,7 +52,7 @@
                                     </a>	
                                 </div><!--vid_thumbnail end-->
                                 <div class="video_info">
-                                    <h3><a href="#" title="">  {{vid.description}}s</a></h3>
+                                    <h3><a href="#" title="">  {{vid.description}}</a></h3>
                                     <h4><a href="Single_Channel_Home.html" title="">{{vid.tag}}</a> <span class="verify_ic"><i class="icon-tick"></i></span></h4>
                                     <span>{{vid.tag}}.<small class="posted_dt"></small></span>
                                 </div>
@@ -67,7 +70,7 @@
                 <h3>New Videos</h3>
                 <div class="vidz_list">
                     <div class="row">
-                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth"  *ngFor="let vid of events">
+                        <div class="col-lg-3 col-md-6 col-sm-6 col-6 full_wdth"  *ngFor="let vid of events | pipeformation: searchText">
                             <div class="videoo">
                                 <div class="vid_thumbainl">
                                     <a href="#" title="">

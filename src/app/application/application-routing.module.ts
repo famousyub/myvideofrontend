@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { FormationdetailsComponent } from './formationdetails/formationdetails.component';
 import { MyvideosComponent } from './myvideos/myvideos.component';
+import { FormationvideoComponent } from './formationvideo/formationvideo.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,9 @@ const routes: Routes = [
   } ,
   {
     path: 'vid' , component: MyvideosComponent
+  },
+  {
+    path: 'formation' , component: FormationvideoComponent
   }
 ];
 

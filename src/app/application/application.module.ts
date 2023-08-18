@@ -11,6 +11,10 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { VideosectionComponent } from './videosection/videosection.component';
 import { FormationdetailsComponent } from './formationdetails/formationdetails.component';
 import { SidemenuComponent } from './sidemenu/sidemenu.component';
+import { FormationvideoComponent } from './formationvideo/formationvideo.component';
+import { PipeformationPipe } from '../search/pipeformation.pipe';
+import { FormsModule } from '@angular/forms';
+import { PoputsearchComponent } from './poputsearch/poputsearch.component';
 
 
 @NgModule({
@@ -23,11 +27,15 @@ import { SidemenuComponent } from './sidemenu/sidemenu.component';
     WelcomeComponent,
     VideosectionComponent,
     FormationdetailsComponent,
-    SidemenuComponent
+    SidemenuComponent,
+    FormationvideoComponent,
+    PipeformationPipe,
+    PoputsearchComponent
   ],
   imports: [
     CommonModule,
-    ApplicationRoutingModule
+    ApplicationRoutingModule,
+    FormsModule
   ],
   exports:[
     HeaderComponent,

@@ -2,8 +2,32 @@
 <app-header></app-header>
 <app-sidebar></app-sidebar>
 <app-menu></app-menu>
-<app-videosection [vid]="formationdetails" [formation] = "formation"></app-videosection>
 
-<button (click) ="addFormationtowishlist()" >
-    add to wishlist 
-</button>
+
+
+
+<div class="container-fluid">
+    <div class="row mainContent">
+      
+      <div class="col-md-5 col-md-offset-1">
+        <div class="box">
+
+            <app-videosection [vid]="formationdetails" [formation] = "formation"></app-videosection>
+        </div>      
+      </div>
+      
+    
+      
+      
+    </div>
+  </div>
+  <div class="footer">
+    <button (click) ="download()"  class="btn btn-primary">
+        download
+    </button>
+    
+    
+    <button (click) ="addToWishlist()" class="btn btn-success">
+        add to favourite 
+    </button>
+  </div>

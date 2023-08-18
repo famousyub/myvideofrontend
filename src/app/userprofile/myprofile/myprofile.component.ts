@@ -119,6 +119,7 @@ export class MyprofileComponent implements OnInit {
         this.user = res ;
         console.log(res);
         console.log(this.user.id);
+        localStorage.setItem("user_id",this.user.id);
 
         this.http.get("http://localhost:8081/api/user-profile/" +this.user.id).subscribe(res_=>{
             console.table(res_);

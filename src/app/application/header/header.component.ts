@@ -9,7 +9,8 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HeaderComponent implements OnInit {
 
   constructor(private authservice : AuthService) { }
-
+  searchText:string='';
+  
   ngOnInit(): void {
   }
 

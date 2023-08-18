@@ -17,6 +17,7 @@ import { HttpClientModule, HTTP_INTERCEPTORS }    from '@angular/common/http';
 import { HttpinterceptorInterceptor } from './interceptors/httpinterceptor.interceptor';
 import { ApplicationModule } from './application/application.module';
 import { AuthModule } from './auth/auth.module';
+
 @NgModule({
   declarations: [	
     AppComponent,
@@ -24,7 +25,8 @@ import { AuthModule } from './auth/auth.module';
     BestSellerComponent,
     FullComponent,
     AppHeaderComponent,
-    AppSidebarComponent
+    AppSidebarComponent,
+   
    ],
   imports: [
     BrowserModule,
@@ -37,7 +39,7 @@ import { AuthModule } from './auth/auth.module';
     HttpClientModule,
     SharedModule,
     ApplicationModule,
-    AuthModule
+    AuthModule,
   ],
   providers: [
     {

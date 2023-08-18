@@ -11,7 +11,7 @@ export class MyvideosComponent implements OnInit {
   formations:any ;
   events:any;
   mediashare:any;
-
+  searchText:string='';
 
   constructor(private videsOservice : VideosService) { }
 
